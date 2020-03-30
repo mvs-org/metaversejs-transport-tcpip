@@ -1,0 +1,31 @@
+{
+  "name": "metaversejs-transport-tcpip",
+  "version": "0.0.2",
+  "description": "JavaScript Transport for the Metaverse Blockchain P2P network using TCP/IP",
+  "main": "lib/index.js",
+  "dependencies": {
+    "net": "^1.0.2",
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvs-org/metaversejs-transport-tcpip.git"
+  },
+  "keywords": [
+    "Metaverse",
+    "Blockchain",
+    "P2P"
+  ],
+  "author": "Sven Mutzl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mvs-org/metaversejs-transport-tcpip/issues"
+  },
+  "homepage": "https://github.com/mvs-org/metaversejs-transport-tcpip#readme"
+}

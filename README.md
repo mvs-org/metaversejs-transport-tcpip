@@ -24,7 +24,7 @@ const {P2PTransporterTCPIP} = require('metaversejs-transport-tcpip')
 const transporter = new P2PTransporterTCPIP()
 
 const transport = transporter.get({
-  host: 127.0.0.1,
+  host: '127.0.0.1',
   port: 5251,
 })
 ```
@@ -34,7 +34,7 @@ You can also create the Transport directly
 const {P2PTransportTCPIP} = require('metaversejs-transport-tcpip')
 
 const transport = new P2PTransportTCPIP({
-  host: 127.0.0.1,
+  host: '127.0.0.1',
   port: 5251,
 })
 ```
@@ -44,7 +44,7 @@ const transport = new P2PTransportTCPIP({
 To send data just add it to the $egress subject
 ``` javascript
 const transport = new P2PTransportTCPIP({
-  host: 127.0.0.1,
+  host: '127.0.0.1',
   port: 5251,
 })
 transport.$egress.next(your_buffer)
@@ -54,7 +54,7 @@ transport.$egress.next(your_buffer)
 To receive data just subscribe to $ingress
 ``` javascript
 const transport = new P2PTransportTCPIP({
-  host: 127.0.0.1,
+  host: '127.0.0.1',
   port: 5251,
 })
 transport.$ingress.subscribe((data)=>console.log('received data', data))
@@ -63,7 +63,7 @@ transport.$ingress.subscribe((data)=>console.log('received data', data))
 ### Connect
 ``` javascript
 const transport = new P2PTransportTCPIP({
-  host: 127.0.0.1,
+  host: '127.0.0.1',
   port: 5251,
 })
 transport.connect()
@@ -72,7 +72,7 @@ transport.connect()
 ### Destroy
 ``` javascript
 const transport = new P2PTransportTCPIP({
-  host: 127.0.0.1,
+  host: '127.0.0.1',
   port: 5251,
 })
 transport.connect()
@@ -83,16 +83,16 @@ transport.destroy()
 To get the status you can subscribe to $status
 ``` javascript
 const transport = new P2PTransportTCPIP({
-  host: 127.0.0.1,
+  host: '127.0.0.1',
   port: 5251,
 })
 transport.$status.subscribe((data)=>console.log('status', data))
 ```
 
 To only get informed about an established connection you can use pipe
-```
+``` javascript
 const transport = new P2PTransportTCPIP({
-  host: 127.0.0.1,
+  host: '127.0.0.1',
   port: 5251,
 })
 transport.$status
@@ -106,7 +106,7 @@ transport.connect()
 ### Error handling
 ``` javascript
 const transport = new P2PTransportTCPIP({
-  host: 127.0.0.1,
+  host: '127.0.0.1',
   port: 5251,
 })
 transport.$errors.subscribe((error)=>console.error(error))

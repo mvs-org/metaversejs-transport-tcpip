@@ -1,6 +1,6 @@
 {
   "name": "metaversejs-transport-tcpip",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JavaScript Transport for the Metaverse Blockchain P2P network using TCP/IP",
   "main": "lib/index.js",
   "dependencies": {

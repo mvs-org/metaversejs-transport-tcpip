@@ -36,7 +36,10 @@ export class P2PTransportTCPIP implements P2PTransport {
         this.socket.on('connect', () => this.$status.next('connected'))
         this.socket.on('end', () => this.$status.next('disconnected'))
         this.socket.on('data', (data)=> this.$ingress.next(data) )
-        this.$egress.subscribe(data => this.socket.write(data))
+        this.$egress.subscribe(data => {
+            if(this.socket.writable)
+            this.socket.write(data)
+        })
     }
 
     connect() {
